@@ -21,6 +21,17 @@
     </style>
 </head>
 <body>
-    <iframe src="http://106.54.15.154"></iframe>
+    <iframe src="http://106.54.15.154" id="embedded-iframe"></iframe>
+
+    <script>
+        function adjustIframe() {
+            var iframe = document.getElementById('embedded-iframe');
+            iframe.style.width = window.innerWidth + 'px';
+            iframe.style.height = window.innerHeight + 'px';
+        }
+
+        window.addEventListener('resize', adjustIframe);
+        adjustIframe();
+    </script>
 </body>
 </html>
